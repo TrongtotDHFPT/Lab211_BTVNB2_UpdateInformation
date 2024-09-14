@@ -119,60 +119,60 @@ public class Manager {
         }else
             return false;
     }
-    public void updateInformation(){
-        Scanner sc = new Scanner(System.in);
-        String id ;
-        int flag = 0;
-        boolean temp = true;
-        System.out.print("Enter Id :");
-        id = sc.nextLine();
-        for(Product tay : listProduct){
-            if(!tay.getId().equalsIgnoreCase(id)){
-                System.out.println("\"Product does not exist\"");
-                temp = false;
-            }else{
-                  if(checkBlank(tay.getName())){
-                    System.out.print("Enter newName : ");
-                    String newName = sc.nextLine();
-                    tay.setName(newName);
-                  }if(checkBlank(tay.getBrandId())){
-                    System.out.print("Enter new Brand id : ");
-                    String newBrandId= sc.nextLine();
-                    tay.setBrandId(newBrandId);
-                  }if(checkBlank(tay.getCategoryId())){
-                    System.out.print("Enter Category id : ");
-                    String newCategoryId= sc.nextLine();
-                    tay.setCategoryId(newCategoryId);
-                  }
-                  do{
-                      System.out.print("Enter new Model year : ");
-                      int newModelYear = Integer.parseInt(sc.nextLine());
-                      if(newModelYear>=1900 || newModelYear <2100){
-                          flag = 1;
-                          tay.setModelYear(newModelYear);
-                      }else{ 
-                          System.out.println("Ensure model year is a valid year.(1900 <= Model year < 2100)");
-                      }
-                  }while(flag==0);
-                  do{
-                      System.out.print("Enter new List price : ");
-                      int newListPrice = Integer.parseInt(sc.nextLine());
-                      if(newListPrice >0){
-                          flag = 0;
-                          tay.setListPrice(newListPrice);
-                      }else{
-                          System.out.println("Ensure Validate list price is a positive number.");
-                      }
-                  }while(flag==1);
+//     public void updateInformation(){
+//         Scanner sc = new Scanner(System.in);
+//         String id ;
+//         int flag = 0;
+//         boolean temp = true;
+//         System.out.print("Enter Id :");
+//         id = sc.nextLine();
+//         for(Product tay : listProduct){
+//             if(!tay.getId().equalsIgnoreCase(id)){
+//                 System.out.println("\"Product does not exist\"");
+//                 temp = false;
+//             }else{
+//                   if(checkBlank(tay.getName())){
+//                     System.out.print("Enter newName : ");
+//                     String newName = sc.nextLine();
+//                     tay.setName(newName);
+//                   }if(checkBlank(tay.getBrandId())){
+//                     System.out.print("Enter new Brand id : ");
+//                     String newBrandId= sc.nextLine();
+//                     tay.setBrandId(newBrandId);
+//                   }if(checkBlank(tay.getCategoryId())){
+//                     System.out.print("Enter Category id : ");
+//                     String newCategoryId= sc.nextLine();
+//                     tay.setCategoryId(newCategoryId);
+//                   }
+//                   do{
+//                       System.out.print("Enter new Model year : ");
+//                       int newModelYear = Integer.parseInt(sc.nextLine());
+//                       if(newModelYear>=1900 || newModelYear <2100){
+//                           flag = 1;
+//                           tay.setModelYear(newModelYear);
+//                       }else{ 
+//                           System.out.println("Ensure model year is a valid year.(1900 <= Model year < 2100)");
+//                       }
+//                   }while(flag==0);
+//                   do{
+//                       System.out.print("Enter new List price : ");
+//                       int newListPrice = Integer.parseInt(sc.nextLine());
+//                       if(newListPrice >0){
+//                           flag = 0;
+//                           tay.setListPrice(newListPrice);
+//                       }else{
+//                           System.out.println("Ensure Validate list price is a positive number.");
+//                       }
+//                   }while(flag==1);
                   
                   
-            }
-        }
-        if(temp)
-            System.out.println("Updating success");
-        else
-            System.out.println("Updating fail");
+//             }
+//         }
+//         if(temp)
+//             System.out.println("Updating success");
+//         else
+//             System.out.println("Updating fail");
         
-        //Ask to go back to the main menu 
-    }
-}
+//         //Ask to go back to the main menu 
+//     }
+// }
