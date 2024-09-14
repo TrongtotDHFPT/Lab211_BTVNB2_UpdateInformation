@@ -24,6 +24,7 @@ public class Manager {
     List<Brand> listBrand = new ArrayList();
     List<Category> listCategory = new ArrayList();
     
+         
     public boolean checkIdFromList(String str, String id){
         switch(str){
             case "Category":{
